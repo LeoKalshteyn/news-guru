@@ -14,10 +14,28 @@ export default class extends React.Component {
     }
 
     render() {
+        let navTitleStyle = { fontSize: 10 , fontFamily: "Times New Roman", letterSpacing: 0.7 };
+
+        if (!this.state.working)
+            return <AppLoading/>
+
+        return (
+            <Router>
+                <Stack key="root"
+                       titleStyle={navTitleStyle}
+                    <Scene key="Main" component={Main} title="Main" initial/>
+                </Stack>
+            </Router>
+        )
     }
 }
 
 class Main extends React.Component {
     render() {
+        return (
+            <View>
+                <Text>Test</Text>
+            </View>
+        );
     }
 }
