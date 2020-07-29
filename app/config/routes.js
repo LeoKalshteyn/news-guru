@@ -22,7 +22,9 @@ export default class extends React.Component {
         return (
             <Router>
                 <Stack key="root"
+                       navigationBarStyle={{backgroundColor: "#f33"}}
                        titleStyle={navTitleStyle}
+                       backButtonTintColor={'#1E1611'}>
                     <Scene key="Main" component={Main} title="Main" initial/>
                 </Stack>
             </Router>
@@ -33,9 +35,18 @@ export default class extends React.Component {
 class Main extends React.Component {
     render() {
         return (
-            <View>
+            <View style={styles.container}>
                 <Text>Test</Text>
             </View>
         );
     }
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#300',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+});
