@@ -1,5 +1,5 @@
 import { Dimensions, Platform } from 'react-native';
-import { moderateScale as normalize } from 'react-native-size-matters';
+import { moderateScale } from 'react-native-size-matters';
 
 const color = {
     black: 'rgba(0,0,0,.84)',
@@ -13,10 +13,10 @@ const color = {
 }
 
 const fontSize = {
-    small: normalize(12),
-    regular: normalize(14),
-    large: normalize(21),
-    extralarge: normalize(28)
+    small: moderateScale(12),
+    regular: moderateScale(14),
+    large: moderateScale(20),
+    extralarge: moderateScale(29)
 }
 
 const imageOptions = {
@@ -37,5 +37,5 @@ const navTitleStyle = { fontSize: fontSize.regular + 1 , fontFamily: fontFamily.
 const navigationBarStyle = { backgroundColor: color.black, borderBottomWidth:0 }
 
 export {
-    color, fontSize, padding, navbarHeight, windowWidth, windowHeight, tabIconStyle, navTitleStyle, navigationBarStyle, imageOptions, normalize
+    color, fontSize, padding, navbarHeight, windowWidth, windowHeight, tabIconStyle, navTitleStyle, navigationBarStyle, imageOptions, moderateScale
 }
