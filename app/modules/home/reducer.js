@@ -9,6 +9,22 @@ const homeReducer = (state = initialState, action) => {
 
             return {...state, isFetching, hasError:false};
         }
+
+        case t.HEADLINES_AVAILABLE:{
+            let { articles } = action.data;
+
+            return {...state, isFetching:false, articles, hasError:false};
+        }
+
+        case t.HEADLINES_ERROR:{
+            const error = action.error;
+
+            return {...state, isFetching:false, hasError:true, errorMsg:error};
+        }
+
+        default:
+            return state;
+
     }
 };
 
