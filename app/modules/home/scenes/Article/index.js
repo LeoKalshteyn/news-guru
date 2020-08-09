@@ -5,7 +5,7 @@ import { WebView } from 'react-native-webview';
 
 export default function Article(props) {
     const {navigation} = props;
-    const article = navigation.getParam("article");
+    const article = navigation.getParam("article");e
 
     return (
         <WebView source={{ uri: article.url }}
